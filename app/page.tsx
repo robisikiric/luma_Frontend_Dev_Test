@@ -1,24 +1,22 @@
 'use client';
 import Image from "next/image";
-import { useState } from 'react';
 import LanguageSwitcher from "./lib/components/LanguageSwitcher";
 import RoundCheckbox from "./lib/components/RoundCheckbox";
 
-export default function LandingPage() {
-  const [language, setLanguage] = useState('en');
+export default function Home() {
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center md:px-[111px] p-6">
       <header className="w-full mt-[42px] p-4 flex justify-between items-center gap-[10px]">
         <div className="flex items-center">
-            <Image
-              src="/logo.svg"
-              alt="My Streaming Platform Logo"
-              width={62}
-              height={62}
-              priority
-            />
-            <h1 className="text-3xl font-bold">My Streaming Platform</h1>
+          <Image
+            src="/logo.svg"
+            alt="My Streaming Platform Logo"
+            width={62}
+            height={62}
+            priority
+          />
+          <h1 className="text-3xl font-bold">My Streaming Platform</h1>
         </div>
         <div className="flex items-center space-x-4">
           <LanguageSwitcher />
@@ -28,8 +26,10 @@ export default function LandingPage() {
 
       <main className="flex flex-1 flex-col md:flex-row w-full mt-24 md:mt-0 p-6">
         <section className="flex-1 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold md:text-left text-center">
-            Get Instant Access to Endless Entertainment.
+          <h1 className="w-full text-3xl md:text-4xl lg:text-5xl font-bold md:text-left text-center">
+            Get Instant Access to 
+            <br />
+            Endless Entertainment.
           </h1>
         </section>
 
@@ -42,22 +42,26 @@ export default function LandingPage() {
                 type="email"
                 placeholder="E-mail"
                 className="w-full p-3 bg-[#1C1C1C] rounded-md placeholder-gray"
+                aria-label="Email"
               />
               <input
                 type="password"
                 placeholder="Password"
                 className="w-full p-3 bg-[#1C1C1C] rounded-md placeholder-gray"
+                aria-label="Password"
               />
               <input
                 type="text"
                 placeholder="Full name"
                 className="w-full p-3 bg-[#1C1C1C] rounded-md placeholder-gray"
+                aria-label="Full name"
               />
               <div className="space-y-8">
                 <div className="flex items-center space-x-2">
                   <RoundCheckbox label="" />
                   <label htmlFor="terms" className="ms-1 text-sm text-[#414141] text-left rounded">
-                    By signing up, you agree to X's{' '} <br />
+                    By signing up, you agree to X's{' '}
+                    <br />
                     <a href="#" className="underline text-[#757575]">
                       Terms of Service
                     </a>{' '}
@@ -80,28 +84,28 @@ export default function LandingPage() {
             </form>
 
             <div className="mt-8 mb-4 flex items-center justify-center text-[#747474] px-3">
-                <span className="grow h-[1px] bg-[#747474] my-1" />
-                <span className="whitespace-nowrap px-3">or continue with</span>
-                <span className="grow h-[1px] bg-[#747474] my-1" />
+              <span className="grow h-[1px] bg-[#747474] my-1" />
+              <span className="whitespace-nowrap px-3">or continue with</span>
+              <span className="grow h-[1px] bg-[#747474] my-1" />
             </div>
             <div className="flex justify-center space-x-14 px-12">
               <Image
                 src="/google_icon.svg"
-                alt="Sign in by Google"
+                alt="Sign in with Google"
                 width={43}
                 height={43}
                 priority
               />
               <Image
                 src="/fb_icon.svg"
-                alt="Sign in by FB"
+                alt="Sign in with Facebook"
                 width={43}
                 height={43}
                 priority
               />
               <Image
                 src="/fb_icon.svg"
-                alt="Sign in by FB"
+                alt="Sign in with Twitter"
                 width={43}
                 height={43}
                 priority
